@@ -1,5 +1,3 @@
-boolean touched = false;
-
 class Button {
   float x, y, w, h;
   float borderRadius, borderSize, textSize;
@@ -44,14 +42,6 @@ class Button {
     boolean checkY = (mouse.y >= y-w/2) && (mouse.y <= y+h/2);
     //    line(x-w/2,0,x-w/2,height);line(x+w/2,0,x+w/2,height);
     //    debug("x:",checkX);debug("y:",checkY);debug("touched:",touched);
-    return checkX && checkY && touched;
+    return checkX && checkY && mousePressed;
   }
-}
-
-void touchStarted() {
-  touched = true;
-}
-
-void touchEnded() {
-  touched = false;
 }
